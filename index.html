@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<html>
+<h1>Calculadora de Fechas</h1>
+<h3>Suma/Resta Naturales</h3>
+<form>
+    <br>
+    <label>Fecha</label> <input type="date" id="fecha" ; onchange="document.getElementById('fecha').value=this.value;">
+    <label>Dias</label> <input type="text" minlength="1" maxlength="5" id="dias" ;
+        onchange="document.getElementById('dias').value=this.value;">
+    <input type="button" value="calcular" onclick="calcDate()"><br>Resultado<p id="resul"></p><br><br>
+</form>
+<br>
+<h3>Diferencia Naturales</h3>
+<form><br>
+    <label> Fecha Inicio </label><input type="date" id="inicio" min="?php echo date('Y-m-d')" ;
+        onchange="document.getElementById('inicio').value=this.value;">
+    <label> Fecha Fin </label> <input type="date" id="fin" min="?php echo date('Y-m-d')" ;
+        onchange="document.getElementById('fin').value=this.value;">
+    <input type="button" value="calcular" onclick="getDays()"><br>Resultado<p id="resul2"></p><br><br>
+</form>
+<br>
+<h3>Suma/Resta Hábiles</h3>
+<form><br>
+    <label> Fecha Inicio </label><input type="date" id="finicio" min="?php echo date('Y-m-d')" ;
+        onchange="document.getElementById('finicio').value=this.value;">
+    <label>Dias</label> <input type="text" minlength="1" maxlength="5" id="dias2" ;
+        onchange="document.getElementById('dias2').value=this.value;">
+    <input type="button" value="calcular" onclick="calcWorkingDate()"><br>Resultado<p id="resul3"></p>
+    <br><br>
+</form>
+<br>
+<h3>Diferencia Hábiles</h3>
+<form><br>
+    <label> Fecha Inicio </label><input type="date" id="finicio" min="?php echo date('Y-m-d')" ;
+        onchange="document.getElementById('finicio').value=this.value;">
+    <label>Dias</label> <input type="text" minlength="1" maxlength="5" id="dias2" ;
+        onchange="document.getElementById('dias2').value=this.value;">
+    <input type="button" value="calcular" onclick="calcWorkingDate()"><br>Resultado<p id="resul4"></p>
+    <br><br>
+</form>
+</body>
+</html>
+<script src="js/dateCalc.js"></script>
+</body>
+</html>
